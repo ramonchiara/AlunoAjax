@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Média do Aluno</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $('#calcular').click(function () {
+                    $.ajax({
+                        url: 'Aluno',
+                        method: 'get',
+                        data: {
+                            nome: $('#nome').val(),
+                            p1: $('#p1').val(),
+                            p2: $('#p2').val()
+                        },
+                        success: function (data, textStatus, jqXHR) {
+                            $('#media').val(data.media);
+                            $('#aprovado').val(data.aprovado ? 'Sim' : 'Não');
+                        },
+                        statusCode: {
+                            400: function (jqXHR, textStatus, errorThrown) {
+                                var data = JSON.parse(jqXHR.responseText);
+                                alert(data.erro);
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Média do Aluno</h1>
+        <form action="#" method="get">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tbody>
+                    <tr>
+                        <th><label for="nome">Nome:</label></th>
+                        <td><input type="text" id="nome" name="nome"/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="p1">P1:</label></th>
+                        <td><input type="text" id="p1" name="p1"/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="p2">P2:</label></th>
+                        <td><input type="text" id="p2" name="p2"/></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="button" id="calcular" value="Calcular Média"/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="media">Média:</label></th>
+                        <td><input type="text" id="media" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <th><label for="aprovado">Aprovado:</label></th>
+                        <td><input type="text" id="aprovado" readonly="readonly"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
