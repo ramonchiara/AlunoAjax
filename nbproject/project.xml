@@ -18,7 +18,7 @@
             <definitions>.\lib\nblibraries.properties</definitions>
         </libraries>
         <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
-            <library name="jquery" version="3.2.1">
+            <library name="jquery" version="3.3.1">
                 <file localPath="web/js/libs/jquery/core.js" path="core.js"/>
                 <file localPath="web/js/libs/jquery/jquery.js" path="jquery.js"/>
                 <file localPath="web/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
@@ -26,6 +26,28 @@
                 <file localPath="web/js/libs/jquery/jquery.slim.js" path="jquery.slim.js"/>
                 <file localPath="web/js/libs/jquery/jquery.slim.min.js" path="jquery.slim.min.js"/>
                 <file localPath="web/js/libs/jquery/jquery.slim.min.map" path="jquery.slim.min.map"/>
+            </library>
+            <library name="twitter-bootstrap" version="4.0.0">
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-grid.css" path="css/bootstrap-grid.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-grid.css.map" path="css/bootstrap-grid.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-grid.min.css" path="css/bootstrap-grid.min.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-grid.min.css.map" path="css/bootstrap-grid.min.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-reboot.css" path="css/bootstrap-reboot.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-reboot.css.map" path="css/bootstrap-reboot.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-reboot.min.css" path="css/bootstrap-reboot.min.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap-reboot.min.css.map" path="css/bootstrap-reboot.min.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.css" path="css/bootstrap.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.css.map" path="css/bootstrap.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.min.css" path="css/bootstrap.min.css"/>
+                <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.min.css.map" path="css/bootstrap.min.css.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.bundle.js" path="js/bootstrap.bundle.js"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.bundle.js.map" path="js/bootstrap.bundle.js.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.bundle.min.js" path="js/bootstrap.bundle.min.js"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.bundle.min.js.map" path="js/bootstrap.bundle.min.js.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.js" path="js/bootstrap.js"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.js.map" path="js/bootstrap.js.map"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.min.js" path="js/bootstrap.min.js"/>
+                <file localPath="web/js/libs/twitter-bootstrap/js/bootstrap.min.js.map" path="js/bootstrap.min.js.map"/>
             </library>
         </libraries>
     </configuration>

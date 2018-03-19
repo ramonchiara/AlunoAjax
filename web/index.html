@@ -4,64 +4,43 @@
         <meta charset="UTF-8">
         <title>Média do Aluno</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function () {
-                $('#calcular').click(function () {
-                    $.ajax({
-                        url: 'Aluno',
-                        method: 'get',
-                        data: {
-                            nome: $('#nome').val(),
-                            p1: $('#p1').val(),
-                            p2: $('#p2').val()
-                        },
-                        success: function (data, textStatus, jqXHR) {
-                            $('#media').val(data.media);
-                            $('#aprovado').val(data.aprovado ? 'Sim' : 'Não');
-                        },
-                        statusCode: {
-                            400: function (jqXHR, textStatus, errorThrown) {
-                                var data = JSON.parse(jqXHR.responseText);
-                                alert(data.erro);
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Média do Aluno</h1>
-        <form action="#" method="get">
-            <table border="1" cellspacing="0" cellpadding="5">
-                <tbody>
-                    <tr>
-                        <th><label for="nome">Nome:</label></th>
-                        <td><input type="text" id="nome" name="nome"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="p1">P1:</label></th>
-                        <td><input type="text" id="p1" name="p1"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="p2">P2:</label></th>
-                        <td><input type="text" id="p2" name="p2"/></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td><input type="button" id="calcular" value="Calcular Média"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="media">Média:</label></th>
-                        <td><input type="text" id="media" readonly="readonly"/></td>
-                    </tr>
-                    <tr>
-                        <th><label for="aprovado">Aprovado:</label></th>
-                        <td><input type="text" id="aprovado" readonly="readonly"/></td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Média do Aluno</h1>
+                    <form action="#" method="get">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" name="nome"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="p1">P1:</label>
+                            <input type="text" class="form-control" id="p1" name="p1"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="p2">P2:</label>
+                            <input type="text" class="form-control" id="p2" name="p2"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-primary" id="calcular" value="Calcular Média"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="media">Média:</label>
+                            <input type="text" class="form-control" id="media" name="media" readonly="readonly"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="aprovado">Aprovado:</label>
+                            <input type="text" class="form-control" id="aprovado" name="aprovado" readonly="readonly"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/aluno.js" type="text/javascript"></script>
     </body>
 </html>
