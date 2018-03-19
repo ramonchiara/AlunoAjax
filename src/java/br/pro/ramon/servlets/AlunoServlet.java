@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Aluno")
+@WebServlet("/aluno")
 public class AlunoServlet extends HttpServlet {
 
     @Override

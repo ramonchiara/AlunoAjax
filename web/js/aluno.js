@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#calcular').click(function () {
         $.ajax({
-            url: 'Aluno',
+            url: 'aluno',
             method: 'get',
             data: {
                 nome: $('#nome').val(),
