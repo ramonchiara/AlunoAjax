@@ -16,9 +16,9 @@ public class AlunoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        response.setContentType("application/json");
 
         try {
             // ENTRADA
@@ -33,6 +33,7 @@ public class AlunoServlet extends HttpServlet {
 
             // SAÍDA
             out.printf(Locale.US, "{ \"media\": %.2f, \"aprovado\": %s }", media, aprovado);
+            // O Locale.US serve para que a média venha com ponto (6.0) e não com vírgula (6,0), o que resultaria em um JSON inválido.
         } catch (NullPointerException ex) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             out.printf("{ \"erro\": \"%s\" }", "Entre com todos os parâmetros.");
